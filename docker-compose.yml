@@ -1,0 +1,68 @@
+version: '3.8'
+
+
+
+services:
+  back:
+    container_name: reshedule
+    build: 
+      context: "./Api/user-service"
+      dockerfile: Dockerfile
+    image: node:v1
+    volumes:
+      -  ./Api/user-service
+    environment:
+     - MYSQL_DATABASE=new_schema
+     - MYSQL_PASSWORD=admin123
+     - MYSQL_ROOT_PASSWORD=admin123
+     - MYSQL_HOST=localhost
+
+networks:
+  internalnet:
+    driver: bridge    
+     
+#2
+  # nginx:
+  #   depends_on:
+  #     - api
+  #     - client
+  #   restart: always
+  #   build:
+  #     dockerfile: Dockerfile
+  #     context: ./nginx
+  #   ports:
+  #     - "3050:80"
+
+  # api:
+  #   build:
+  #     dockerfile: Dockerfile
+  #     context: "./Api/user-service"
+  #   depends_on:
+  #     - mysql_db
+  #   volumes:
+  #     - /app/node_modules
+  #     - ./Api/user-service:/app
+  #   environment:
+  #     <<: *common-variables
+  #     MYSQL_HOST_IP: mysql_db
+
+  # client:
+  #   stdin_open: true
+  #   environment:
+  #     - CHOKIDAR_USEPOLLING=true
+  #   build:
+  #     dockerfile: Dockerfile
+  #     context: "./web"
+  #   volumes:
+  #     - /app/node_modules
+  #     - ./web:/app
+
+  # adminer:
+  #     image: adminer:latest
+  #     restart: unless-stopped
+  #     ports:
+  #       - 8000:8080
+  #     depends_on:
+  #       - mysql_db
+  #     environment:
+  #       ADMINER_DEFAULT_SERVER: mysql_db

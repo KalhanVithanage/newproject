@@ -1,0 +1,111 @@
+.imgUploadContainer {
+  background-color: $gray2;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 274px;
+  .uploadRightSection {
+    .uploadRightSectionLeft {
+      margin-top: 22px;
+      .uploadImageLabel {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: $fontweight4;
+        line-height: 24px;
+        margin-bottom: 6px;
+      }
+      .uploadTemplateBtn {
+        @include blue-border-btn;
+      }
+    }
+  }
+  .uploadRightSectionRight {
+    margin-top: 19px;
+    margin-left: 54px;
+    .uploadViewImgSection {
+      @include flexCol;
+      align-items: center;
+      .wishImg {
+        height: 208px;
+        margin-bottom: 4px;
+        width: 157px;
+      }
+      .viewBtnSection {
+        display: flex;
+        margin-left: 100px;
+        .viewBtn {
+          @include blue-border-btn;
+          height: 30px;
+          margin-bottom: 8px;
+          margin-top: 4px;
+          width: 60px;
+        }
+      }
+    }
+  }
+}
+
+@include tablet-landscape {
+  .imgUploadContainer {
+   
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .uploadRightSection {
+      .uploadRightSectionLeft {
+        .uploadTemplateBtn {
+          @include blue-border-btn;
+          width: 160px;
+        }
+      }
+    }
+    .uploadRightSectionRight {
+      margin-left: 0px;
+      .uploadViewImgSection {
+        .wishImg {
+          height: 200px;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}
+
+@include tablet-portrait {
+  .imgUploadContainer {
+   height: 310px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .uploadRightSection {
+      .uploadRightSectionLeft {
+       
+        .uploadTemplateBtn {
+          @include blue-border-btn;
+          width: 200px;
+        }
+      }
+    }
+    .uploadRightSectionRight {
+      margin-left: 0px;
+      .uploadViewImgSection {
+        .wishImg {
+          height: 230px;
+          width: 200px;
+          margin-bottom: 4px;
+        }
+      
+      .viewBtnSection {
+        display: flex;
+        margin-left: 140px;
+        .viewBtn {
+          @include blue-border-btn;
+          height: 30px;
+          margin-bottom: 8px;
+          margin-top: 4px;
+          width: 60px;
+        }
+      }
+      }
+    }
+  }
+}

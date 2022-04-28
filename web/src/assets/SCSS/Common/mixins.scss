@@ -1,0 +1,89 @@
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex {
+  align-items: center;
+  display: flex;
+}
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mainPadding {
+  padding: 0px 95px 0px 95px;
+}
+
+@mixin linkSection {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0px;
+  margin-bottom: 2px;
+}
+
+@mixin links {
+  color: $gray1;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: $fontweight5;
+  margin-left: 16px;
+  margin-bottom: 0px;
+
+  &:active,
+  &:focus {
+    color: $blue1;
+    font-weight: $fontweight7;
+  }
+}
+@mixin grayText {
+  color: $gray1;
+  font-size: 14px;
+  font-weight: $fontweight5;
+ 
+ 
+}
+$mobile-width-mx: 760px;
+$mobile-width-mn: 360px;
+$tablet-width: 760px;
+$laptop-width: 992px;
+$desktop-width: 1024px;
+$desktop-large-width: 1280px;
+$desktop-width_s: 1366px;
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width-mn}) and (max-width:#{$mobile-width-mx}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media (min-width:#{$desktop-width}) and (max-width:#{$desktop-large-width -1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media only screen and (min-width:#{$laptop-width}) and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media only screen and (min-width:#{$tablet-width}) and (max-width: #{$laptop-width}) {
+    @content;
+  }
+}

@@ -1,0 +1,108 @@
+.templateViewMainContainer {
+  .templateViewBodyContainer {
+    @include mainPadding;
+    .templateLinkSection {
+      @include linkSection;
+      .templateLink {
+        @include links;
+      }
+    }
+    .middleSection {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      margin-top: 57px;
+      .greetingsPromoHeading {
+        @include grayText;
+      }
+      .checkboxOptions {
+        @include grayText;
+      }
+    }
+    .cardGallerySection {
+      .galleryRow {
+        margin-bottom: 18px;
+      }
+    }
+
+    .paginationSection {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-bottom: 39px;
+      .paginationSectionOne {
+        display: flex;
+        flex-direction: row;
+        margin-right: 18px;
+        margin-top: 10px;
+        .itemsPerPageHeading {
+          color: $gray6;
+          font-family: "Helvetica";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: $fontweight4;
+          line-height: 24px;
+        }
+        .paginationBtnSection {
+          display: flex;
+          margin-left: 20px;
+          .pageCount {
+            color: $gray8;
+            font-family: Helvetica;
+            font-size: 14px;
+            font-weight: $fontweight4;
+            letter-spacing: 0px;
+            line-height: 24px;
+            text-align: center;
+          }
+
+          .upDownBtn {
+            @include flexCol;
+            .btnSwitch {
+              color: $gray7;
+              height: 9px;
+              margin-bottom: 5px;
+              margin-left: 15px;
+              margin-right: 22px;
+            }
+          }
+        }
+      }
+    }
+    .viewListBtnSection {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 78px;
+      .backBtn {
+        @include back-btn;
+      }
+      .nextBtn {
+        @include blue-backg-btn;
+        margin-left: 21px;
+        width: 170px;
+      }
+    }
+  }
+  .viewFooter {
+    margin-top: 0px;
+  }
+}
+
+
+@include tablet-portrait {
+  .templateViewMainContainer {
+    .templateViewBodyContainer {
+    padding: 0px 40px 0px 40px;
+    }
+  }
+}
+  
+  @include tablet-landscape {
+    .templateViewMainContainer {
+      .templateViewBodyContainer {
+      padding: 0px 40px 0px 40px;
+      }
+    }
+  }

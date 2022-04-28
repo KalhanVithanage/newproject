@@ -1,0 +1,80 @@
+.loginContainer {
+  width: 100%;
+  position: relative;
+
+  .leftSectionLogin {
+    @include flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    .loginText {
+      color: $white;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: $fontweight4;
+      line-height: 19px;
+      margin-left: 29px;
+      text-align: justify;
+      width: 52%;
+    }
+  }
+  .rightSectionLogin {
+    @include flexCol;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+    .logoWithLogin {
+      text-align: center;
+      .logoLogin {
+        height: 70px;
+        width: 103px;
+      }
+      .headingLogin {
+        color: $gray1;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: $fontweight5;
+        margin-bottom: 37px;
+      }
+    }
+    .inputSection {
+      .label {
+        font-weight: $fontweight4;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 10px;
+      }
+      .password {
+        margin-top: 15px;
+      }
+      .inputFeild {
+        background: $white;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        height: 35px;
+        width: 345px;
+      }
+    }
+    .continueBtn {
+      @include blue-backg-btn;
+      margin-top: 34px;
+    }
+  }
+  .uploadImage {
+    display: flex;
+  }
+}
+
+@include tablet-landscape {
+  .loginContainer {
+    .leftSectionLogin {
+      .loginText {
+        margin-left: 29px;
+        text-align: justify;
+        width: 75%;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.templateFormContainer {
+  background-color: $gray2;
+  height: 274px;
+  justify-content: space-between;
+  padding: 19px 25px;
+
+  .inputFeildTemplate {
+    background: $white;
+    border: none;
+    box-shadow: 0.5px 3px 10px rgba(119, 119, 119, 0.1);
+    height: 35px;
+    margin-bottom: 26px;
+    margin-top: 0;
+    width: 100%;
+  }
+  .templateFormLabel {
+    color: $gray1;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: $fontweight4;
+    line-height: 24px;
+    margin-bottom: 0px;
+  }
+
+  
+}
+
+@include tablet-portrait {
+  .templateFormContainer {
+    background-color: $gray2;
+    height: 360px;
+    margin-bottom: 20px;
+    
+    
+  }
+}

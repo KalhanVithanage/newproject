@@ -1,0 +1,42 @@
+@mixin blue-backg-btn {
+  @include flexCenter;
+  background: $blue1;
+  border-radius: 4px;
+  color: $white;
+  font-size: 14px;
+  font-weight: $fontweight5;
+  height: 40px;
+  line-height: 16px;
+  width: 345px;
+}
+
+@mixin blue-border-btn {
+  @include flexCenter;
+  background: $white;
+  border-radius: 5px;
+  border: 1px solid $blue2;
+  box-sizing: border-box;
+  color: $blue2;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: $fontweight5;
+  height: 35px;
+  line-height: 24px;
+  margin-bottom: 190px;
+  margin-top: 6px;
+  width: 200px;
+
+
+}
+
+@mixin back-btn {
+  @include flexCenter;
+  background: $white;
+  border-radius: 5px;
+  border: 1px solid $blue3;
+  color: $blue3;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  width: 170px;
+}

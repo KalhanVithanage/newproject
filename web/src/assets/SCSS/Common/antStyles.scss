@@ -1,0 +1,149 @@
+.ant-input {
+  &:focus,
+  &:active,
+  &:hover {
+    box-shadow: none;
+    border-color: none;
+  }
+}
+
+.ant-btn {
+  &:focus,
+  &:active,
+  &:hover {
+    border-color: transparent;
+    box-shadow: none;
+  }
+}
+a.ant-btn {
+  line-height: 30px;
+  padding-top: 4px !important;
+}
+
+.ant-checkbox-input,
+.ant-checkbox-wrapper {
+  &:active,
+  &:focus,
+  &:visited,
+  &:focus-visible {
+    color: $blue2;
+  }
+}
+
+
+  .ant-checkbox-wrapper-checked {
+    color:$blue2 !important;
+  }
+
+
+
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  opacity: 0;
+}
+
+
+
+.ant-pagination {
+  .ant-pagination-item {
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+    background-color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $blue1;
+      a {
+        color: $white;
+    
+        &:hover,
+        &:active,
+        &:focus,
+        &:visited,
+        &:focus-visible {
+          color: $white !important;
+        }
+      }
+    }
+  }
+  .ant-pagination-item a {
+    color: $blue4;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited,
+    &:focus-visible {
+      color: $white;
+    }
+  }
+
+  .ant-pagination-item-link {
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+  }
+}
+
+.ant-popover-inner-content {
+  padding: 0px;
+}
+
+.deactivateModal {
+  .ant-modal-content {
+    width: 411px;
+    .ant-modal-close .ant-modal-close-x {
+      display: none;
+    }
+    .ant-modal-header {
+      display: none;
+    }
+    .ant-modal-body {
+      padding: 15px 95px;
+
+      .deactivateText {
+        font-style: normal;
+        font-weight: $fontweight5;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        color: $gray10;
+      }
+      .deactivateBtnSection {
+        @include flexCenter;
+
+        .noBtn {
+          background: #ffffff;
+          border-radius: 5px;
+          border: 1px solid $blue3;
+          box-sizing: border-box;
+          color: #3a86ff;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: $fontweight7;
+          height: 44px;
+          width: 119px;
+        }
+
+        .yesBtn {
+          background:$red2;
+          border-radius: 5px;
+          color: $white;
+          height: 44px;
+          margin-left: 18px;
+          width: 119px;
+        }
+      }
+    }
+  }
+
+  .ant-modal-footer {
+    display: none;
+    .ant-btn-default,
+    .ant-btn-primary {
+      display: none;
+    }
+  }
+}
+
